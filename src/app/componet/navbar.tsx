@@ -11,7 +11,7 @@ const Nav = () => {
     { name: "SERVICE", link: "/" },
     { name: "ABOUT", link: "/" },
     { name: "BLOG'S", link: "/" },
-    { name: "CONTACT", link: "/" },
+    { name: "CONTACT", link: "/Contact" },
   ];
 
   let [open, setOpen] = useState(false);
