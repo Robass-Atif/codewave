@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import   Navbar  from   './componet/navbar'
+import   Footer  from   './componet/footerW'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +30,9 @@ export default function RootLayout({
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
       </Head>
-
+      <Navbar />
       <body className={inter.className}>{children}</body>
+    <Footer />
     </html>
   );
 }
