@@ -68,7 +68,7 @@ function CommentForm() {
                             htmlFor="name"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
                         >
-                            Name
+                            
                         </label>
                     </div>
                     <div className="group mb-4">
@@ -86,7 +86,7 @@ function CommentForm() {
                             htmlFor="email"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
                         >
-                            Email
+                            
                         </label>
                     </div>
                     <div className="group mb-4">
@@ -103,7 +103,7 @@ function CommentForm() {
                             htmlFor="comment"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
                         >
-                            Comment
+                            
                         </label>
                     </div>
                     <button
