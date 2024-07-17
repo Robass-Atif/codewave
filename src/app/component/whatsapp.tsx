@@ -7,7 +7,7 @@ function whatsapp() {
 
             <div className="fixed right-5 bottom-10">
 
-                <a href="https://wa.me/9266150854" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/93266150854" target="_blank" rel="noopener noreferrer">
                     <Image src="/whatsapp.png" alt="whatsapp" width={100} height={100} />
                 </a>
             </div>
