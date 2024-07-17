@@ -49,8 +49,8 @@ function CommentForm() {
     };
 
     return (
-        <form className="bg-blue-600 w-full h-screen xl:pt-40 md:pt-14 sm:pt-8" onSubmit={sendEmail}>
-            <div className="card bg-white rounded-lg shadow-lg p-6 mx-auto w-80 mt-30  mb-4">
+        <form className="bg-blue-600 w-full h-screen md:pt-20  xl:pt-37 pt-14 sm:pt-8" onSubmit={sendEmail}>
+            <div className="card bg-white rounded-lg shadow-lg p-6 mx-auto w-80 mt-30  xl:mb-4">
                 <h2 className="title text-2xl font-semibold text-center mb-4">Leave a Comment</h2>
                 <div className="form">
                     <div className="group mb-4">
