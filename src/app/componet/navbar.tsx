@@ -11,7 +11,7 @@ const Nav = () => {
     { name: "SERVICE", link: "/" },
     { name: "ABOUT", link: "/" },
     { name: "BLOG'S", link: "/" },
-    { name: "CONTACT", link: "/Contact" },
+    { name: "CONTACT", link: "/" },
   ];
 
   let [open, setOpen] = useState(false);
@@ -41,7 +41,7 @@ const Nav = () => {
             {/* <ion-icon name="logo-ionic"></ion-icon> */}
             <ion-icon name="business"></ion-icon>
           </span>
-          CodeWave
+          CodeWaves
         </div>
 
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>

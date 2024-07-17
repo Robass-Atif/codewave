@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <title>CodeWaves</title>
         <script
           type="module"
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -35,9 +36,9 @@ export default function RootLayout({
 
      
 
-      <Navbar />
+      
       <body className={inter.className}>{children}</body>
-    <Footer />
+    
     </html>
   );
 }
