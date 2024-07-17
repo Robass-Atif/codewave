@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { useEffect } from "react";
-import   Navbar  from   './componet/navbar'
-import   HeroSection  from   './componet/HeroSection'
-import LowHero from "./componet/lowHero";
-import FooterW from "./componet/footerW";
-import Contact from "./componet/contact";
+import   Navbar  from   './component/navbar'
+import   HeroSection  from   './component/HeroSection'
+import LowHero from "./component/lowHero";
+import FooterW from "./component/footerW";
+import Contact from './component/contact';
+
 
 
 export default function Home() {
