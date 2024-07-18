@@ -1,11 +1,14 @@
 "use client";
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser'; // Import emailjs-com for EmailJS integration
+import { Ring } from 'react-css-spinners'
+import { set } from 'mongoose';
 
 function CommentForm() {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [comment, setComment] = useState<string>('');
+    const [loading, setLoading] = useState<boolean>(false);
 
     const templateParams = {
         from_name: name,
@@ -15,22 +18,25 @@ function CommentForm() {
 
     const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setLoading(true);
 
         emailjs.send('service_pcimnyt', 'template_mfnpm8o', templateParams, 'VQIN2GoyfiZ9nXTGV')
-        .then((response) => {
-            console.log('Email successfully sent!', response);
-            setComment('');
-            setEmail('');
-            setName('');
-             // show success message
-            alert('Your message has been sent successfully. We will get back to you soon.');
-            
-             
-        })
-        .catch((error) => {
-            console.error('Failed to send email. Error:', error);
-            // Optionally, handle the error or provide user feedback
-        });
+            .then((response) => {
+                setLoading(false);
+                console.log('Email successfully sent!', response);
+                setComment('');
+                setEmail('');
+                setName('');
+                // show success message
+
+                // alert('Your message has been sent successfully. We will get back to you soon.');
+
+
+            })
+            .catch((error) => {
+                console.error('Failed to send email. Error:', error);
+                // Optionally, handle the error or provide user feedback
+            });
 
 
         const res = await fetch('/api/contact', {
@@ -45,7 +51,7 @@ function CommentForm() {
 
         const { data } = await res.json();
         console.log(data);
-        
+
     };
 
     return (
@@ -68,7 +74,7 @@ function CommentForm() {
                             htmlFor="name"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
                         >
-                            
+
                         </label>
                     </div>
                     <div className="group mb-4">
@@ -86,7 +92,7 @@ function CommentForm() {
                             htmlFor="email"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
                         >
-                            
+
                         </label>
                     </div>
                     <div className="group mb-4">
@@ -103,14 +109,24 @@ function CommentForm() {
                             htmlFor="comment"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
                         >
-                            
+
                         </label>
                     </div>
+                    {/* <button
+                        type="submit"
+                        className= "bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center transition-all duration-300 ease-in-out"
+                        
+                    >
+                        {loading ? <Ring color="rgba(236,216,234,1)" size={20} thickness={7} /> : 'Submit'}
+                        
+                    </button> */}
                     <button
                         type="submit"
                         className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center transition-all duration-300 ease-in-out"
+                        style={{ width: '100px', height: '40px' }} // Adjust these values as needed
+
                     >
-                        Submit
+                        {loading ? <Ring color="rgba(236,216,234,1)" size={20} thickness={7} /> : 'Submit'}
                     </button>
                 </div>
             </div>
