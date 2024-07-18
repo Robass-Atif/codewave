@@ -35,6 +35,10 @@ function CommentForm() {
                 console.log('Email successfully sent!', response);
 
                 // show success message
+                setComment('');
+                setEmail('');
+                setName('');
+                setLoading(false);
 
                 // alert('Your message has been sent successfully. We will get back to you soon.');
 
@@ -58,10 +62,7 @@ function CommentForm() {
 
         const { data } = await res.json();
         console.log(data);
-        setComment('');
-        setEmail('');
-        setName('');
-        setLoading(false);
+
 
 
 
