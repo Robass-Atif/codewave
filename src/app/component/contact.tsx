@@ -29,25 +29,23 @@ function CommentForm() {
         e.preventDefault();
         setLoading(true);
 
-        emailjs.send('service_pcimnyt', 'template_mfnpm8o', templateParams, 'VQIN2GoyfiZ9nXTGV')
-            .then((response) => {
+        // emailjs.send('service_pcimnyt', 'template_mfnpm8o', templateParams, 'VQIN2GoyfiZ9nXTGV')
+        //     .then((response) => {
 
-                console.log('Email successfully sent!', response);
+        //         console.log('Email successfully sent!', response);
 
-                // show success message
-                setComment('');
-                setEmail('');
-                setName('');
-                setLoading(false);
+        //         // show success message
+                
+        
 
-                // alert('Your message has been sent successfully. We will get back to you soon.');
+        //         // alert('Your message has been sent successfully. We will get back to you soon.');
 
 
-            })
-            .catch((error) => {
-                console.error('Failed to send email. Error:', error);
-                // Optionally, handle the error or provide user feedback
-            });
+        //     })
+        //     .catch((error) => {
+        //         console.error('Failed to send email. Error:', error);
+        //         // Optionally, handle the error or provide user feedback
+        //     });
 
 
         const res = await fetch('/api/contact', {
@@ -63,12 +61,15 @@ function CommentForm() {
         const { data } = await res.json();
         console.log(data);
 
+        setComment('');
+                setEmail('');
+                setName('');
+                setLoading(false);
+                toast.success("Message send succesfully!", {
+                    position: "bottom-left",
+                });
 
 
-
-        toast.success("Message send succesfully!", {
-            position: "bottom-left",
-        });
 
     };
 
