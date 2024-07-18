@@ -3,12 +3,21 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser'; // Import emailjs-com for EmailJS integration
 import { Ring } from 'react-css-spinners'
 import { set } from 'mongoose';
+import { toast, ToastContainer } from 'react-toastify';
+  import "react-toastify/dist/ReactToastify.css";
+
+
 
 function CommentForm() {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [comment, setComment] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
+
+    const notify = () => {
+       
+    };
+  
 
     const templateParams = {
         from_name: name,
@@ -22,7 +31,7 @@ function CommentForm() {
 
         emailjs.send('service_pcimnyt', 'template_mfnpm8o', templateParams, 'VQIN2GoyfiZ9nXTGV')
             .then((response) => {
-                setLoading(false);
+                
                 console.log('Email successfully sent!', response);
                 setComment('');
                 setEmail('');
@@ -51,6 +60,13 @@ function CommentForm() {
 
         const { data } = await res.json();
         console.log(data);
+        setLoading(false);
+
+        
+  
+        toast.success("Message send succesfully!", {
+          position: "bottom-left",
+        });
 
     };
 
@@ -112,14 +128,7 @@ function CommentForm() {
 
                         </label>
                     </div>
-                    {/* <button
-                        type="submit"
-                        className= "bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center transition-all duration-300 ease-in-out"
-                        
-                    >
-                        {loading ? <Ring color="rgba(236,216,234,1)" size={20} thickness={7} /> : 'Submit'}
-                        
-                    </button> */}
+                   
                     <button
                         type="submit"
                         className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center transition-all duration-300 ease-in-out"
@@ -128,6 +137,7 @@ function CommentForm() {
                     >
                         {loading ? <Ring color="rgba(236,216,234,1)" size={20} thickness={7} /> : 'Submit'}
                     </button>
+                    <ToastContainer />
                 </div>
             </div>
         </form>
