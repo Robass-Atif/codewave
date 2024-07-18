@@ -9,7 +9,7 @@ const Nav = () => {
   const Links = [
     { name: "HOME", link: "/" },
     { name: "SERVICE", link: "/" },
-    { name: "ABOUT", link: "/" },
+    { name: "TEAM", link: "/" },
     { name: "CAREER", link: "/" },
     { name: "CONTACT", link: "/" },
   ];

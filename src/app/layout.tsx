@@ -6,6 +6,7 @@ import   Navbar  from   './component/navbar'
 import   Footer  from   './component/footerW'
 import Whatsapp from "./component/whatsapp";
 
+import FooterW from "./component/footerW";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className={inter.className}>
       
         {children}</body>
+        <FooterW />
     
     </html>
   );

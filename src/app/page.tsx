@@ -11,11 +11,11 @@ import Contact from './component/contact';
 export default function Home() {
   return (
     <>
-        <Navbar /> 
+    
         <HeroSection />
         <LowHero />
         <Contact />
-        <FooterW />
+        
 
     </>
       );
