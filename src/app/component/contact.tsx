@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'; // Import emailjs-com for EmailJS integr
 import { Ring } from 'react-css-spinners'
 import { set } from 'mongoose';
 import { toast, ToastContainer } from 'react-toastify';
-  import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -15,9 +15,9 @@ function CommentForm() {
     const [loading, setLoading] = useState<boolean>(false);
 
     const notify = () => {
-       
+
     };
-  
+
 
     const templateParams = {
         from_name: name,
@@ -31,11 +31,9 @@ function CommentForm() {
 
         emailjs.send('service_pcimnyt', 'template_mfnpm8o', templateParams, 'VQIN2GoyfiZ9nXTGV')
             .then((response) => {
-                
+
                 console.log('Email successfully sent!', response);
-                setComment('');
-                setEmail('');
-                setName('');
+
                 // show success message
 
                 // alert('Your message has been sent successfully. We will get back to you soon.');
@@ -60,12 +58,15 @@ function CommentForm() {
 
         const { data } = await res.json();
         console.log(data);
+        setComment('');
+        setEmail('');
+        setName('');
         setLoading(false);
 
-        
-  
+
+
         toast.success("Message send succesfully!", {
-          position: "bottom-left",
+            position: "bottom-left",
         });
 
     };
@@ -128,7 +129,7 @@ function CommentForm() {
 
                         </label>
                     </div>
-                   
+
                     <button
                         type="submit"
                         className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center transition-all duration-300 ease-in-out"
