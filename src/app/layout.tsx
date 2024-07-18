@@ -40,13 +40,16 @@ export default function RootLayout({
 
 
 
-        
+       
+      <body className={inter.className}>
+       
       <Whatsapp/>
       <Navbar/>
-      <body className={inter.className}>
-      
-        {children}</body>
+        {children}
+        
         <FooterW />
+        </body>
+        
     
     </html>
   );
