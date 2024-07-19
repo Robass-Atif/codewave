@@ -5,10 +5,10 @@ function SERVICE() {
   return (
     <div>
 
-      <div className='pt-25'>
+      <div className='pt-25 mt-4'>
         <div className='bg-indigo-600 pb-20'>
           <div className='text-white text-center pt-20'>
-            <h1 className='text-4xl font-bold'>Our Services</h1>
+            <h1 className='text-4xl font-bold '>Our Services</h1>
 
           </div>
           {/* cards of services */}

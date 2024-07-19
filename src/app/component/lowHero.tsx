@@ -10,7 +10,7 @@ const LowHero: FC = () => {
       
       <section className="flex flex-col md:flex-row items-center justify-between bg-indigo-600 p-10  mt-20">
         <div className="md:w-1/2 mb-8 md:mb-0">
-        <h2 className="text-5xl font-bold text-center xl:text-right sm:text-center text-white border-none  pb-14">Our <span className="text-cyan-500">Cause</span></h2>
+        <h2 className="text-5xl font-bold text-center xl:text-right sm:text-center text-white border-none   pb-14">Our <span className="text-cyan-500">Cause</span></h2>
 
         <p className="text-white text-2xl leading-loose">
   We are a group of teachers and students who facilitate understanding

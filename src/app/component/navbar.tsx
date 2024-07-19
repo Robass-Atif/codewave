@@ -11,7 +11,7 @@ const Nav = () => {
     { name: "SERVICE", link: "/Service" },
     { name: "TEAM", link: "/Team" },
     { name: "CAREER", link: "/Career" },
-    { name: "CONTACT", link: "/Contact" },
+    
   ];
 
   let [open, setOpen] = useState(false);

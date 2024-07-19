@@ -35,8 +35,8 @@ function CommentForm() {
                 console.log('Email successfully sent!', response);
 
                 // show success message
-                
-        
+
+
 
                 // alert('Your message has been sent successfully. We will get back to you soon.');
 
@@ -62,12 +62,12 @@ function CommentForm() {
         console.log(data);
 
         setComment('');
-                setEmail('');
-                setName('');
-                setLoading(false);
-                toast.success("Message send succesfully!", {
-                    position: "bottom-left",
-                });
+        setEmail('');
+        setName('');
+        setLoading(false);
+        toast.success("Message send succesfully!", {
+            position: "bottom-left",
+        });
 
 
 
