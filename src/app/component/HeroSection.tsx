@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     
     <main className="container mx-auto px-4 py-2 flex flex-col lg:flex-row items-center mt-20 xl:mt-22 sm:mt-40 xl:pt-0 md:pt-0 pt-5">
-      <div className="lg:w-1/2 mb-10 lg:mb-0 pr-10 xl:pl-0 md:pl-0 pl-9  ">
+      <div className="lg:w-1/2 mb-10 lg:mb-0 pr-10 xl:pl-5  ">
         <h1 className="text-4xl font-bold mb-4 ">A small business is only as good as its tools.</h1>
         <p className="text-lg text-gray-700 mb-6">
           We’re different. Growlight is the only SaaS business platform that lets you run your business on one platform.
