@@ -15,7 +15,9 @@ function CAREER() {
         </div>
         <div className='flex justify-center pt-10'>
           <button className='bg-white text-indigo-600 font-bold py-2 px-6 rounded hover:bg-indigo-400 hover:text-white duration-500'>
+          <a href='https://forms.gle/wEerrHwK4vGmynvF9' target='_blank' rel='noreferrer'>
             Apply Now
+          </a>
           </button>
         </div>
       </div>
