@@ -6,7 +6,8 @@ const Footer = () => {
       <div className="container px-6 pt-6">
         <div className="mb-6 flex justify-center space-x-2">
           <a
-            href="#!"
+            href="https://www.facebook.com/profile.php?id=61562765675071"
+            target='_blank'
             type="button"
             className="rounded-full bg-[#3b5998] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
             data-twe-ripple-init
@@ -23,6 +24,7 @@ const Footer = () => {
 
           <a
             href="#!"
+            target='_blank'
             type="button"
             className="rounded-full bg-[#55acee] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
             data-twe-ripple-init
@@ -38,7 +40,8 @@ const Footer = () => {
           </a>
 
           <a
-            href="#!"
+            href="mailto:codewaveinstitute@gmail.com"
+            
             type="button"
             className="rounded-full bg-[#dd4b39] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
             data-twe-ripple-init
@@ -52,6 +55,7 @@ const Footer = () => {
               </svg>
             </span>
           </a>
+
 
           <a
             href="#!"
@@ -70,44 +74,45 @@ const Footer = () => {
           </a>
 
           <a
-  href="https://www.linkedin.com/in/robassatif/"
-  type="button"
-  className="rounded-full bg-[#0082ca] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
-  data-twe-ripple-init
-  data-twe-ripple-color="light">
-  <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      viewBox="0 0 448 512">
-      <path d="M100.28 448H7.4V148.9h92.88zm-46.14-372a53.68 53.68 0 1 1 53.68 53.68A53.67 53.67 0 0 1 54.14 76zm394.26 372h-92.68V312.36c0-32.38-11.6-54.54-40.54-54.54-22.1 0-35.25 14.87-41.05 29.22-2.12 5.15-2.65 12.36-2.65 19.57V448h-92.68s1.23-233.86 0-258.1h92.68v36.61a94 94 0 0 1 83.38-46.14c60.82 0 106.41 39.73 106.41 125.17z" />
-    </svg>
-  </span>
-</a>
+            href="https://www.linkedin.com/company/codewavesinstitute/"
+            target='_blank'
+            type="button"
+            className="rounded-full bg-[#0082ca] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light">
+            <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 448 512">
+                <path d="M100.28 448H7.4V148.9h92.88zm-46.14-372a53.68 53.68 0 1 1 53.68 53.68A53.67 53.67 0 0 1 54.14 76zm394.26 372h-92.68V312.36c0-32.38-11.6-54.54-40.54-54.54-22.1 0-35.25 14.87-41.05 29.22-2.12 5.15-2.65 12.36-2.65 19.57V448h-92.68s1.23-233.86 0-258.1h92.68v36.61a94 94 0 0 1 83.38-46.14c60.82 0 106.41 39.73 106.41 125.17z" />
+              </svg>
+            </span>
+          </a>
 
 
-          <a
-  href="https://github.com/Robass-Atif"
-  type="button"
-  className="rounded-full bg-[#333333] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
-  data-twe-ripple-init
-  data-twe-ripple-color="light">
-  <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      viewBox="0 0 24 24">
-      <path d="M12 0C5.371 0 0 5.371 0 12c0 5.303 3.438 9.8 8.205 11.387.599.111.82-.26.82-.577v-2.169c-3.338.727-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.758-1.333-1.758-1.089-.745.083-.73.083-.73 1.205.084 1.839 1.237 1.839 1.237 1.071 1.835 2.809 1.305 3.495.998.109-.775.42-1.305.763-1.605-2.665-.305-5.467-1.333-5.467-5.932 0-1.31.469-2.382 1.235-3.222-.123-.303-.535-1.521.117-3.165 0 0 1.007-.322 3.301 1.23.957-.266 1.984-.399 3.005-.403 1.02.004 2.047.137 3.005.403 2.292-1.553 3.298-1.23 3.298-1.23.653 1.644.241 2.862.118 3.165.769.84 1.235 1.912 1.235 3.222 0 4.61-2.805 5.624-5.475 5.921.43.372.815 1.102.815 2.222v3.293c0 .321.219.694.825.575C20.565 21.796 24 17.299 24 12c0-6.629-5.371-12-12-12z" />
-    </svg>
-  </span>
-</a>
+          {/* <a
+            href="https://github.com/Robass-Atif"
+            type="button"
+            className="rounded-full bg-[#333333] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            data-twe-ripple-init
+            data-twe-ripple-color="light">
+            <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+                <path d="M12 0C5.371 0 0 5.371 0 12c0 5.303 3.438 9.8 8.205 11.387.599.111.82-.26.82-.577v-2.169c-3.338.727-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.758-1.333-1.758-1.089-.745.083-.73.083-.73 1.205.084 1.839 1.237 1.839 1.237 1.071 1.835 2.809 1.305 3.495.998.109-.775.42-1.305.763-1.605-2.665-.305-5.467-1.333-5.467-5.932 0-1.31.469-2.382 1.235-3.222-.123-.303-.535-1.521.117-3.165 0 0 1.007-.322 3.301 1.23.957-.266 1.984-.399 3.005-.403 1.02.004 2.047.137 3.005.403 2.292-1.553 3.298-1.23 3.298-1.23.653 1.644.241 2.862.118 3.165.769.84 1.235 1.912 1.235 3.222 0 4.61-2.805 5.624-5.475 5.921.43.372.815 1.102.815 2.222v3.293c0 .321.219.694.825.575C20.565 21.796 24 17.299 24 12c0-6.629-5.371-12-12-12z" />
+              </svg>
+            </span>
+          </a> */}
 
         </div>
       </div>
 
       <div className="bg-zinc-200 p-4 w-full text-center dark:bg-neutral-700">
         © 2024 Copyright: CodeWaves
-        
+
       </div>
     </footer>
   );
