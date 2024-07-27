@@ -9,7 +9,7 @@ const HeroSection = () => {
 
       <div className="lg:w-1/2 mb-10 lg:mb-0 pr-10 xl:pl-5  border-l-4 border-indigo-600  pl-5">
         <div className="absolute inset-0 left-[-1px] top-0 bottom-0 border-l-4  "></div>
-        <h1 className="text-4xl font-extrabold mb-6 text-gray-900 leading-snug">
+        <h1 className="text-4xl font-extrabold mb-6 text-gray-900 ">
           Welcome to <span className='text-indigo-700'>CodeWaves</span>
           
         </h1>
