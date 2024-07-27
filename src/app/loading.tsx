@@ -1,19 +1,11 @@
-import React from 'react'
-import { Ripple} from 'react-css-spinners'
+// src/component/loading.tsx
+import React from 'react';
+import Preloader from './Preloader';
 
-function loading() {
+export default function Loading() {
   return (
     <div>
-      
-      
-  <Ripple
-    color="rgba(236,216,234,1)"
-    size={119}
-    thickness={7}
-  />
-
+      <Preloader />
     </div>
-  )
+  );
 }
-
-export default loading;

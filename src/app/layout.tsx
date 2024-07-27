@@ -5,6 +5,7 @@ import Head from "next/head";
 import   Navbar  from   './component/navbar'
 import   Footer  from   './component/footerW'
 import Whatsapp from "./component/whatsapp";
+import Preloader from "./Preloader";
 
 import FooterW from "./component/footerW";
 
@@ -42,7 +43,12 @@ export default function RootLayout({
 
        
       <body className={inter.className}>
+
+      
+
+
        
+      <Preloader/>
       <Whatsapp/>
       <Navbar/>
         {children}

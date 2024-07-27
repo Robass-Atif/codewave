@@ -58,7 +58,8 @@ const Footer = () => {
 
 
           <a
-            href="#!"
+            href="https://www.instagram.com/codewaveinstitute/"
+            target='_blank'
             type="button"
             className="rounded-full bg-[#ac2bac] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
             data-twe-ripple-init
