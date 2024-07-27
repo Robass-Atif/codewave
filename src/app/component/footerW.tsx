@@ -23,25 +23,29 @@ const Footer = () => {
           </a>
 
           <a
-            href="#!"
+            href="https://youtube.com/@codewave-ne6zp?si=2zycmTSqGlIkBY3v"
             target='_blank'
             type="button"
-            className="rounded-full bg-[#55acee] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
+            className="rounded-full bg-[#FF0000] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
             data-twe-ripple-init
-            data-twe-ripple-color="light">
+            data-twe-ripple-color="light"
+          >
             <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
-                viewBox="0 0 512 512">
-                <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+              >
+                <path d="M23.498 6.186a2.992 2.992 0 0 0-2.1-2.1C18.137 4.5 12 4.5 12 4.5s-6.137 0-9.398.586a2.992 2.992 0 0 0-2.1 2.1C.01 8.558 0 12 0 12s.01 3.442.502 5.814a2.992 2.992 0 0 0 2.1 2.1C5.863 19.5 12 19.5 12 19.5s6.137 0 9.398-.586a2.992 2.992 0 0 0 2.1-2.1C23.99 15.442 24 12 24 12s-.01-3.442-.502-5.814zM9.546 15.548V8.452l6.691 3.548-6.691 3.548z" />
               </svg>
             </span>
           </a>
 
+
           <a
             href="mailto:codewaveinstitute@gmail.com"
-            
+
             type="button"
             className="rounded-full bg-[#dd4b39] p-3 uppercase leading-normal text-white shadow-dark-3 shadow-black/30 transition duration-150 ease-in-out hover:shadow-dark-1 focus:shadow-dark-1 focus:outline-none focus:ring-0 active:shadow-1 dark:text-white"
             data-twe-ripple-init
@@ -115,7 +119,7 @@ const Footer = () => {
         © 2024 Copyright: CodeWaves
 
       </div>
-    </footer>
+    </footer >
   );
 };
 

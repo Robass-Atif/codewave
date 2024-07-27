@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-import   Navbar  from   './component/navbar'
-import   Footer  from   './component/footerW'
+import Navbar from './component/navbar'
+import Footer from './component/footerW'
 import Whatsapp from "./component/whatsapp";
+import Scroll from "./component/scrollUp";
+
 import Preloader from "./Preloader";
 
 import FooterW from "./component/footerW";
@@ -28,35 +30,35 @@ export default function RootLayout({
           type="module"
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
         ></script>
-        
-        
+
+
         <script
           noModule
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
       </Head>
 
-     
 
 
 
 
-       
+
+
       <body className={inter.className}>
 
-      
 
 
-       
-      <Preloader/>
-      <Whatsapp/>
-      <Navbar/>
+        <Scroll />
+
+        <Preloader />
+        <Whatsapp />
+        <Navbar />
         {children}
-        
+
         <FooterW />
-        </body>
-        
-    
+      </body>
+
+
     </html>
   );
 }

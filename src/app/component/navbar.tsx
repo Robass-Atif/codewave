@@ -12,7 +12,7 @@ const Nav = () => {
     { name: "SERVICE", link: "/Service" },
     { name: "TEAM", link: "/Team" },
     { name: "CAREER", link: "/Career" },
-    
+
   ];
 
   let [open, setOpen] = useState(false);
@@ -39,10 +39,12 @@ const Nav = () => {
       <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800'>
           <span className='text-3xl text-indigo-600 mr-1 pt-2'>
-            
+
             <ion-icon name="business"></ion-icon>
           </span>
-          CodeWaves
+          <div className="text-3xl font-bold">
+            <a href="#" className="hover:text-blue-300">CodeWaves</a>
+          </div>
         </div>
 
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
