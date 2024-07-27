@@ -29,7 +29,12 @@ const Preloader = () => {
 
   return (
     <div className={styles.preloader}>
-      <Ripple color="rgba(236,216,234,1)" size={119} thickness={7} />
+      
+      <Ripple
+    color="rgba(106,130,211,1)"
+    size={125}
+    thickness={7}
+  />
     </div>
   );
 };
