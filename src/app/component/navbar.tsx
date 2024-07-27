@@ -43,7 +43,7 @@ const Nav = () => {
             <ion-icon name="business"></ion-icon>
           </span>
           <div className="text-3xl font-bold">
-            <a href="#" className="hover:text-blue-300">CodeWaves</a>
+            <span className="hover:text-blue-300">CodeWaves</span>
           </div>
         </div>
 

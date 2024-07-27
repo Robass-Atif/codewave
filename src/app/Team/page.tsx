@@ -21,7 +21,7 @@ function TEAM() {
                   <Image src={"/Robass.jpeg"} width={340} height={100} alt='development' />
                 </div>
                 <div className='p-4'>
-                  <h1 className='text-2xl font-bold text-center'>Web Development</h1>
+                  <h1 className='text-2xl font-bold text-center'>ROBASS ATIF</h1>
                   <p className='text-center text-gray-500 pt-3'>We provide web development services for your business to grow online.</p>
                 </div>
               </div>

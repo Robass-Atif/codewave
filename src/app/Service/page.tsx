@@ -22,7 +22,7 @@ function SERVICE() {
                 </div>
                 <div className='px-4 pb-4'>
                   <h1 className='text-2xl font-bold text-center'>Web Development</h1>
-                  <p className='text-center text-gray-500 pt-3'>We provide web development services for your business to grow online.</p>
+                  <p className='text-center text-gray-500 pt-3'>Build responsive and scalable websites tailored to your needs.</p>
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@ function SERVICE() {
                 </div>
                 <div className='px-4 pb-4'>
                   <h1 className='text-2xl font-bold text-center'>WordPress Development</h1>
-                  <p className='text-center text-gray-500 pt-3'>We provide web development services for your business to grow online.</p>
+                  <p className='text-center text-gray-500 pt-3'>Create and manage dynamic websites with ease using WordPress.</p>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@ function SERVICE() {
                 </div>
                 <div className='px-4 pb-4'>
                   <h1 className='text-2xl font-bold text-center'>App Development</h1>
-                  <p className='text-center text-gray-500 pt-3'>We provide web development services for your business to grow online.</p>
+                  <p className='text-center text-gray-500 pt-3'>Design and develop custom applications for mobile and web platforms.</p>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ function SERVICE() {
                 </div>
                 <div className='p-4 '>
                   <h1 className='text-2xl font-bold text-center'>Data Analytics</h1>
-                  <p className='text-center text-gray-500 pt-3'>We provide web development services for your business to grow online.</p>
+                  <p className='text-center text-gray-500 pt-3'>Transform data into actionable insights for strategic decision-making</p>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ function SERVICE() {
                 </div>
                 <div className='p-4'>
                   <h1 className='text-2xl font-bold text-center'>Cybersecurity</h1>
-                  <p className='text-center text-gray-500 pt-3'>We provide web development services for your business to grow online.</p>
+                  <p className='text-center text-gray-500 pt-3'>Protect your digital assets with comprehensive security solutions</p>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ function SERVICE() {
                 </div>
                 <div className='p-4'>
                   <h1 className='text-2xl font-bold text-center'>Artificial Intelligence</h1>
-                  <p className='text-center text-gray-500 pt-3'>We provide web development services for your business to grow online.</p>
+                  <p className='text-center text-gray-500 pt-3'>Leverage artificial intelligence to enhance your business processes and decision-making</p>
                 </div>
               </div>
             </div>
