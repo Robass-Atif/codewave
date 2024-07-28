@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser'; // Import emailjs-com for EmailJS integration
+import emailjs from '@emailjs/browser';
 import { Ring } from 'react-css-spinners'
 import { set } from 'mongoose';
 import { toast, ToastContainer } from 'react-toastify';
@@ -34,17 +34,11 @@ function CommentForm() {
 
                 console.log('Email successfully sent!', response);
 
-                // show success message
-
-
-
-                // alert('Your message has been sent successfully. We will get back to you soon.');
-
 
             })
             .catch((error) => {
                 console.error('Failed to send email. Error:', error);
-                // Optionally, handle the error or provide user feedback
+
             });
 
 

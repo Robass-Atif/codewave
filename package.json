@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "classnames": "^2.5.1",
     "emailjs-com": "^3.2.0",
     "mongoose": "^8.5.1",
     "next": "14.2.4",

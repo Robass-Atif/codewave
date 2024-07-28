@@ -51,9 +51,7 @@ const Nav = () => {
               <Link href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</Link>
             </li>
           ))}
-          {/* <button className='bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-400 duration-500'>
-            Get Started
-          </button> */}
+        
         </ul>
       </div>
     </div>

@@ -32,7 +32,7 @@ const ScrollToTop = () => {
           onClick={scrollToTop}
           className="bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-600 flex items-center justify-center"
         >
-          <FaArrowUp className="text-2xl" /> {/* Adjust the size here */}
+          <FaArrowUp className="text-2xl" /> 
         </button>
       )}
     </div>
