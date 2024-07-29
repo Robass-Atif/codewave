@@ -186,7 +186,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/tayyab4.png"
+                      src="/tayyab5.png"
                       width={240}
                       height={100}
                       alt="Tayyab"
