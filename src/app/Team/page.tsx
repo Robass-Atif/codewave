@@ -44,7 +44,7 @@ const TEAM: React.FC = () => {
                     
                   ) : (
                     <Image
-                      src="/Robass.png"
+                      src="/robass1.png"
                       width={240}
                       height={100}
                       alt="Robass Atif"
@@ -60,7 +60,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.robass ? (
                       <Skeleton count={2} />
                     ) : (
-                      'We provide web development services for your business to grow online.'
+                      'Full Stack Developer'
                     )}
                   </p>
                 </div>
@@ -72,10 +72,10 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/abdullah.png"
+                      src="/abdullah1.png"
                       width={240}
                       height={100}
-                      alt="WordPress Development"
+                      alt="Abdullah"
                       className="my-4"
                     />
                   )}
@@ -88,7 +88,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.wordpress ? (
                       <Skeleton count={2} />
                     ) : (
-                      'We provide web development services for your business to grow online.'
+                      'MERN Stack Developer'
                     )}
                   </p>
                 </div>
@@ -100,10 +100,10 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/ahmad.png"
+                      src="/ahmad1.png"
                       width={240}
                       height={100}
-                      alt="App Development"
+                      alt="Ahmad"
                       className="my-4"
                     />
                   )}
@@ -116,7 +116,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.app ? (
                       <Skeleton count={2} />
                     ) : (
-                      'We provide web development services for your business to grow online.'
+                      'Project Manager'
                     )}
                   </p>
                 </div>
@@ -130,7 +130,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240}  />
                   ) : (
                     <Image
-                      src="/Saad.png"
+                      src="/Saad1.png"
                       width={240}
                       height={100}
                       alt="Web Development"
@@ -146,7 +146,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.web ? (
                       <Skeleton count={2} />
                     ) : (
-                      'We provide web development services for your business to grow online.'
+                      'Data Analyst'
                     )}
                   </p>
                 </div>
@@ -158,10 +158,10 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/ashhad.png"
+                      src="/ashhad1.png"
                       width={250}
                       height={110}
-                      alt="WordPress Development"
+                      alt="Ashhad Mazhar"
                       className="my-3"
                     />
                   )}
@@ -174,7 +174,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.wordpress ? (
                       <Skeleton count={2} />
                     ) : (
-                      'We provide web development services for your business to grow online.'
+                      'Cybersecurity Expert'
                     )}
                   </p>
                 </div>
@@ -186,10 +186,10 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/tayyab.png"
+                      src="/tayyab1.png"
                       width={240}
                       height={100}
-                      alt="App Development"
+                      alt="Tayyab"
                       className='my-4'
                       
                     />
@@ -203,7 +203,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.app ? (
                       <Skeleton count={2} />
                     ) : (
-                      'We provide web development services for your business to grow online.'
+                      'Technical Recruiter'
                     )}
                   </p>
                 </div>

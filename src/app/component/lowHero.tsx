@@ -16,7 +16,14 @@ const LowHero: FC = () => {
           </p>
         </div>
         <div className="md:w-1/2">
-          <img src="/hero2.png" alt="Woman with laptop" className="w-full rounded-lg" />
+          {/* <img src="/hero2.png" alt="Woman with laptop" className="w-full rounded-lg" /> */}
+          <Image
+          src="/abc.png"
+          width={736}
+          height={500}
+          alt="Home Image"
+          className=" rounded-lg  pl-10"
+         />
         </div>
       </section>
 
