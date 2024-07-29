@@ -1,11 +1,11 @@
-// components/TEAM.js
-"use client"
-import React, { useState } from 'react';
+// components/TEAM.tsx
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Loader from './LoadingSpinner';
-import classNames from 'classnames';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
-const TEAM = () => {
+const TEAM: React.FC = () => {
   const [loadingStates, setLoadingStates] = useState({
     robass: true,
     wordpress: true,
@@ -13,138 +13,206 @@ const TEAM = () => {
     web: true,
   });
 
-  const handleImageLoad = (imageKey:any) => {
-    setLoadingStates((prevStates) => ({
-      ...prevStates,
-      [imageKey]: false,
-    }));
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingStates({
+        robass: false,
+        wordpress: false,
+        app: false,
+        web: false,
+      });
+    }, 3000); // Simulating image loading delay
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div>
-      <div className="pt-35 mt-7">
-        <div className="bg-indigo-600 pb-20">
-          <div className="text-white text-center pt-20">
-            <h1 className="text-4xl font-bold">Our Team</h1>
-          </div>
-          {/* Cards of services */}
-          {/* First row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10">
-            <div className="bg-white shadow-md rounded-md relative">
-              {loadingStates.robass && <Loader />}
-              <div className="p-10">
+    <SkeletonTheme baseColor="#ccc" highlightColor="#eaeaea">
+      <div>
+        <div className="pt-35 mt-7">
+          <div className="bg-indigo-600 pb-20">
+            <div className="text-white text-center pt-20">
+              <h1 className="text-4xl font-bold">Our Team</h1>
+            </div>
+            {/* Cards of services */}
+            {/* First row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10">
+              <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
-                  <Image
-                    src="/Robass.jpeg"
-                    width={340}
-                    height={100}
-                    alt="Robass Atif"
-                    className={classNames({ 'opacity-0': loadingStates.robass })}
-                    onLoadingComplete={() => handleImageLoad('robass')}
-                  />
+                  {loadingStates.robass ? (
+                    <Skeleton height={220} width={240} />
+                    
+                  ) : (
+                    <Image
+                      src="/Robass.png"
+                      width={240}
+                      height={100}
+                      alt="Robass Atif"
+                      className="my-4"
+                    />
+                  )}
                 </div>
-                <div className="p-4">
-                  <h1 className="text-2xl font-bold text-center">ROBASS ATIF</h1>
-                  <p className="text-center text-gray-500 pt-3">We provide web development services for your business to grow online.</p>
+                <div className="px-4 pb-4">
+                  <h1 className="text-2xl font-bold text-center">
+                    {loadingStates.robass ? <Skeleton width={150} /> : 'ROBASS ATIF'}
+                  </h1>
+                  <p className="text-center text-gray-500 pt-3">
+                    {loadingStates.robass ? (
+                      <Skeleton count={2} />
+                    ) : (
+                      'We provide web development services for your business to grow online.'
+                    )}
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white shadow-md rounded-md relative">
-              {loadingStates.wordpress && <Loader />}
-              <div className="">
+              <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
-                  <img
-                    src="/Wordpress.png"
-                    alt="WordPress Development"
-                    className={classNames({ 'opacity-0': loadingStates.wordpress })}
-                    onLoad={() => handleImageLoad('wordpress')}
-                  />
+                  {loadingStates.wordpress ? (
+                    <Skeleton height={220} width={240} />
+                  ) : (
+                    <Image
+                      src="/abdullah.png"
+                      width={240}
+                      height={100}
+                      alt="WordPress Development"
+                      className="my-4"
+                    />
+                  )}
                 </div>
                 <div className="px-4 pb-4">
-                  <h1 className="text-2xl font-bold text-center">WordPress Development</h1>
-                  <p className="text-center text-gray-500 pt-3">We provide web development services for your business to grow online.</p>
+                  <h1 className="text-2xl font-bold text-center">
+                    {loadingStates.wordpress ? <Skeleton width={150} /> : 'MUHAMMAD ABDULLAH'}
+                  </h1>
+                  <p className="text-center text-gray-500 pt-3">
+                    {loadingStates.wordpress ? (
+                      <Skeleton count={2} />
+                    ) : (
+                      'We provide web development services for your business to grow online.'
+                    )}
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white shadow-md rounded-md relative">
-              {loadingStates.app && <Loader />}
-              <div className="">
+              <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
-                  <img
-                    src="/app.jpg"
-                    alt="App Development"
-                    className={classNames({ 'opacity-0': loadingStates.app })}
-                    onLoad={() => handleImageLoad('app')}
-                  />
+                  {loadingStates.app ? (
+                    <Skeleton height={220} width={240} />
+                  ) : (
+                    <Image
+                      src="/ahmad.png"
+                      width={240}
+                      height={100}
+                      alt="App Development"
+                      className="my-4"
+                    />
+                  )}
                 </div>
                 <div className="px-4 pb-4">
-                  <h1 className="text-2xl font-bold text-center">App Development</h1>
-                  <p className="text-center text-gray-500 pt-3">We provide web development services for your business to grow online.</p>
+                  <h1 className="text-2xl font-bold text-center">
+                    {loadingStates.app ? <Skeleton width={150} /> : 'MUHAMMAD AHMAD'}
+                  </h1>
+                  <p className="text-center text-gray-500 pt-3">
+                    {loadingStates.app ? (
+                      <Skeleton count={2} />
+                    ) : (
+                      'We provide web development services for your business to grow online.'
+                    )}
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          {/* Second row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10">
-            <div className="bg-white shadow-md rounded-md relative">
-              {loadingStates.web && <Loader />}
-              <div className="">
+            {/* Second row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10">
+              <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
-                  <img
-                    src="/Web.png"
-                    alt="Web Development"
-                    className={classNames({ 'opacity-0': loadingStates.web })}
-                    onLoad={() => handleImageLoad('web')}
-                  />
+                  {loadingStates.web ? (
+                    <Skeleton height={220} width={240}  />
+                  ) : (
+                    <Image
+                      src="/Saad.png"
+                      width={240}
+                      height={100}
+                      alt="Web Development"
+                      className='my-4'
+                    />
+                  )}
                 </div>
                 <div className="px-4 pb-4">
-                  <h1 className="text-2xl font-bold text-center">Web Development</h1>
-                  <p className="text-center text-gray-500 pt-3">We provide web development services for your business to grow online.</p>
+                  <h1 className="text-2xl font-bold text-center">
+                    {loadingStates.web ? <Skeleton width={150} /> : 'MUHAMMAD SAAD AKMAL'}
+                  </h1>
+                  <p className="text-center text-gray-500 pt-3">
+                    {loadingStates.web ? (
+                      <Skeleton count={2} />
+                    ) : (
+                      'We provide web development services for your business to grow online.'
+                    )}
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white shadow-md rounded-md relative">
-              {loadingStates.wordpress && <Loader />}
-              <div className="">
+              <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
-                  <img
-                    src="/Wordpress.png"
-                    alt="WordPress Development"
-                    className={classNames({ 'opacity-0': loadingStates.wordpress })}
-                    onLoad={() => handleImageLoad('wordpress')}
-                  />
+                  {loadingStates.wordpress ? (
+                    <Skeleton height={220} width={240} />
+                  ) : (
+                    <Image
+                      src="/ashhad.jpg"
+                      width={250}
+                      height={110}
+                      alt="WordPress Development"
+                      className="my-3"
+                    />
+                  )}
                 </div>
                 <div className="px-4 pb-4">
-                  <h1 className="text-2xl font-bold text-center">WordPress Development</h1>
-                  <p className="text-center text-gray-500 pt-3">We provide web development services for your business to grow online.</p>
+                  <h1 className="text-2xl font-bold text-center">
+                    {loadingStates.wordpress ? <Skeleton width={150} /> : 'ASHHAD MAZHAR'}
+                  </h1>
+                  <p className="text-center text-gray-500 pt-3">
+                    {loadingStates.wordpress ? (
+                      <Skeleton count={2} />
+                    ) : (
+                      'We provide web development services for your business to grow online.'
+                    )}
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white shadow-md rounded-md relative">
-              {loadingStates.app && <Loader />}
-              <div className="">
+              <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
-                  <img
-                    src="/app.jpg"
-                    alt="App Development"
-                    className={classNames({ 'opacity-0': loadingStates.app })}
-                    onLoad={() => handleImageLoad('app')}
-                  />
+                  {loadingStates.app ? (
+                    <Skeleton height={220} width={240} />
+                  ) : (
+                    <Image
+                      src="/tayyab.png"
+                      width={240}
+                      height={100}
+                      alt="App Development"
+                      className='my-4'
+                      
+                    />
+                  )}
                 </div>
                 <div className="px-4 pb-4">
-                  <h1 className="text-2xl font-bold text-center">App Development</h1>
-                  <p className="text-center text-gray-500 pt-3">We provide web development services for your business to grow online.</p>
+                  <h1 className="text-2xl font-bold text-center">
+                    {loadingStates.app ? <Skeleton width={150} /> : 'TAYYAB ASHRAF'}
+                  </h1>
+                  <p className="text-center text-gray-500 pt-3">
+                    {loadingStates.app ? (
+                      <Skeleton count={2} />
+                    ) : (
+                      'We provide web development services for your business to grow online.'
+                    )}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </SkeletonTheme>
   );
 };
 

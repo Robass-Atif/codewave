@@ -1,12 +1,21 @@
-// components/SERVICE.js
-"use client"
-import React, { useState } from 'react';
+// components/SERVICE.tsx
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Loader from './Loader';
-import classNames from 'classnames';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
+interface LoadingStates {
+  web: boolean;
+  wordpress: boolean;
+  app: boolean;
+  dataAnalytics: boolean;
+  cybersecurity: boolean;
+  ai: boolean;
+}
 
 function SERVICE() {
-  const [loadingStates, setLoadingStates] = useState({
+  const [loadingStates, setLoadingStates] = useState<LoadingStates>({
     web: true,
     wordpress: true,
     app: true,
@@ -15,149 +24,72 @@ function SERVICE() {
     ai: true,
   });
 
-  const handleImageLoad = (imageKey:any) => {
-    setLoadingStates((prevStates) => ({
-      ...prevStates,
-      [imageKey]: false,
-    }));
-  };
+  // Simulate image loading delay for demonstration purposes
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingStates({
+        web: false,
+        wordpress: false,
+        app: false,
+        dataAnalytics: false,
+        cybersecurity: false,
+        ai: false,
+      });
+    }, 3000); // Change this duration as per your requirement
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const renderCard = (key: keyof LoadingStates, title: string, description: string, imgSrc: string) => (
+    <div className='bg-white  rounded-md'>
+      <div className='flex justify-center relative'>
+        {loadingStates[key] ? (
+          <Skeleton height={220} width={240} />
+        ) : (
+          <Image
+            src={imgSrc}
+            width={240}
+            height={100}
+            alt={title}
+          />
+        )}
+      </div>
+      <div className='px-4 pb-4'>
+        <h1 className='text-2xl font-bold text-center'>
+          {loadingStates[key] ? <Skeleton width={150} /> : title}
+        </h1>
+        <p className='text-center text-gray-500 pt-3'>
+          {loadingStates[key] ? (
+            <Skeleton count={2} />
+          ) : (
+            description
+          )}
+        </p>
+      </div>
+    </div>
+  );
 
   return (
-    <div>
-      <div className='pt-25 mt-4'>
-        <div className='bg-indigo-600 pb-20'>
-          <div className='text-white text-center pt-20'>
-            <h1 className='text-4xl font-bold'>Our Services</h1>
-          </div>
-          {/* Cards of services */}
-          {/* First row */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10'>
-            <div className='bg-white shadow-md rounded-md relative'>
-              {loadingStates.web && <Loader />}
-              <div className=''>
-                <div className='flex justify-center relative'>
-                  <Image
-                    src="/Web.png"
-                    width={240}
-                    height={100}
-                    alt='Web Development'
-                    className={classNames({ 'opacity-0': loadingStates.web })}
-                    onLoadingComplete={() => handleImageLoad('web')}
-                  />
-                </div>
-                <div className='px-4 pb-4'>
-                  <h1 className='text-2xl font-bold text-center'>Web Development</h1>
-                  <p className='text-center text-gray-500 pt-3'>Build responsive and scalable websites tailored to your needs.</p>
-                </div>
-              </div>
+    <SkeletonTheme baseColor="#ccc" highlightColor="#eaeaea">
+      <div>
+        <div className='pt-25 mt-4'>
+          <div className='bg-indigo-600 pb-20'>
+            <div className='text-white text-center pt-20'>
+              <h1 className='text-4xl font-bold'>Our Services</h1>
             </div>
-
-            <div className='bg-white shadow-md rounded-md relative'>
-              {loadingStates.wordpress && <Loader />}
-              <div className=''>
-                <div className='flex justify-center relative'>
-                  <Image
-                    src="/Wordpress.png"
-                    width={240}
-                    height={100}
-                    alt='WordPress Development'
-                    className={classNames({ 'opacity-0': loadingStates.wordpress })}
-                    onLoadingComplete={() => handleImageLoad('wordpress')}
-                  />
-                </div>
-                <div className='px-4 pb-4'>
-                  <h1 className='text-2xl font-bold text-center'>WordPress Development</h1>
-                  <p className='text-center text-gray-500 pt-3'>Create and manage dynamic websites with ease using WordPress.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className='bg-white shadow-md rounded-md relative'>
-              {loadingStates.app && <Loader />}
-              <div className=''>
-                <div className='flex justify-center relative'>
-                  <Image
-                    src="/app.jpg"
-                    width={240}
-                    height={100}
-                    alt='App Development'
-                    className={classNames({ 'opacity-0': loadingStates.app })}
-                    onLoadingComplete={() => handleImageLoad('app')}
-                  />
-                </div>
-                <div className='px-4 pb-4'>
-                  <h1 className='text-2xl font-bold text-center'>App Development</h1>
-                  <p className='text-center text-gray-500 pt-3'>Design and develop custom applications for mobile and web platforms.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Second row */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10'>
-            <div className='bg-white shadow-md rounded-md relative'>
-              {loadingStates.dataAnalytics && <Loader />}
-              <div className=''>
-                <div className='flex justify-center relative'>
-                  <Image
-                    src="/DataScience.png"
-                    width={300}
-                    height={100}
-                    alt='Data Analytics'
-                    className={classNames({ 'opacity-0': loadingStates.dataAnalytics })}
-                    onLoadingComplete={() => handleImageLoad('dataAnalytics')}
-                  />
-                </div>
-                <div className='p-4 '>
-                  <h1 className='text-2xl font-bold text-center'>Data Analytics</h1>
-                  <p className='text-center text-gray-500 pt-3'>Transform data into actionable insights for strategic decision-making</p>
-                </div>
-              </div>
-            </div>
-
-            <div className='bg-white shadow-md rounded-md relative'>
-              {loadingStates.cybersecurity && <Loader />}
-              <div className=''>
-                <div className='flex justify-center relative'>
-                  <Image
-                    src="/Cybersecurity.png"
-                    width={300}
-                    height={100}
-                    alt='Cybersecurity'
-                    className={classNames({ 'opacity-0': loadingStates.cybersecurity })}
-                    onLoadingComplete={() => handleImageLoad('cybersecurity')}
-                  />
-                </div>
-                <div className='p-4'>
-                  <h1 className='text-2xl font-bold text-center'>Cybersecurity</h1>
-                  <p className='text-center text-gray-500 pt-3'>Protect your digital assets with comprehensive security solutions</p>
-                </div>
-              </div>
-            </div>
-
-            <div className='bg-white shadow-md rounded-md relative'>
-              {loadingStates.ai && <Loader />}
-              <div className=''>
-                <div className='flex justify-center relative'>
-                  <Image
-                    src="/AI.png"
-                    width={300}
-                    height={100}
-                    alt='Artificial Intelligence'
-                    className={classNames({ 'opacity-0': loadingStates.ai })}
-                    onLoadingComplete={() => handleImageLoad('ai')}
-                  />
-                </div>
-                <div className='p-4'>
-                  <h1 className='text-2xl font-bold text-center'>Artificial Intelligence</h1>
-                  <p className='text-center text-gray-500 pt-3'>Leverage artificial intelligence to enhance your business processes and decision-making</p>
-                </div>
-              </div>
+            {/* Cards of services */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10'>
+              {renderCard('web', 'Web Development', 'Build responsive and scalable websites tailored to your needs.', '/Web.png')}
+              {renderCard('wordpress', 'WordPress Development', 'Create custom WordPress themes and plugins for your website.', '/WordPress.png')}
+              {renderCard('app', 'App Development', 'Develop mobile apps for iOS and Android platforms.', '/app.jpg')}
+              {renderCard('dataAnalytics', 'Data Analytics', 'Analyze your data to gain insights and drive decision-making.', '/DataScience.png')}
+              {renderCard('cybersecurity', 'Cybersecurity', 'Protect your systems and data with our cybersecurity solutions.', '/Cybersecurity.png')}
+              {renderCard('ai', 'Artificial Intelligence', 'Implement AI solutions to automate and enhance your business processes.', '/AI.png')}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </SkeletonTheme>
   );
 }
 
