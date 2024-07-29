@@ -29,7 +29,7 @@ const TEAM: React.FC = () => {
   return (
     <SkeletonTheme baseColor="#ccc" highlightColor="#eaeaea">
       <div>
-        <div className="pt-35 mt-7">
+        <div className="pt-35 mt-7 xl:pt-4">
           <div className="bg-indigo-600 pb-20">
             <div className="text-white text-center pt-20">
               <h1 className="text-4xl font-bold">Our Team</h1>
@@ -158,7 +158,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/ashhad.jpg"
+                      src="/ashhad.png"
                       width={250}
                       height={110}
                       alt="WordPress Development"

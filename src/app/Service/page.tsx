@@ -42,7 +42,7 @@ function SERVICE() {
 
   const renderCard = (key: keyof LoadingStates, title: string, description: string, imgSrc: string) => (
     <div className='bg-white  rounded-md'>
-      <div className='flex justify-center relative'>
+      <div className='flex justify-center '>
         {loadingStates[key] ? (
           <Skeleton height={220} width={240} />
         ) : (
@@ -72,7 +72,7 @@ function SERVICE() {
   return (
     <SkeletonTheme baseColor="#ccc" highlightColor="#eaeaea">
       <div>
-        <div className='pt-25 mt-4'>
+        <div className='pt-25 mt-4 xl:pt-4'>
           <div className='bg-indigo-600 pb-20'>
             <div className='text-white text-center pt-20'>
               <h1 className='text-4xl font-bold'>Our Services</h1>
