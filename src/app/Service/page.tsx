@@ -80,7 +80,7 @@ function SERVICE() {
             {/* Cards of services */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 md:px-20 px-5 pt-10'>
               {renderCard('web', 'Web Development', 'Build responsive and scalable websites tailored to your needs.', '/Web.png')}
-              {renderCard('wordpress', 'WordPress Development', 'Create custom WordPress themes and plugins for your website.', '/WordPress.png')}
+              {renderCard('wordpress', 'WordPress Development', 'Create custom WordPress themes and plugins for your website.', '/Wordpress.png')}
               {renderCard('app', 'App Development', 'Develop mobile apps for iOS and Android platforms.', '/app.jpg')}
               {renderCard('dataAnalytics', 'Data Analytics', 'Analyze your data to gain insights and drive decision-making.', '/DataScience.png')}
               {renderCard('cybersecurity', 'Cybersecurity', 'Protect your systems and data with our cybersecurity solutions.', '/Cybersecurity.png')}
