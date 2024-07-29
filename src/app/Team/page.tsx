@@ -44,7 +44,7 @@ const TEAM: React.FC = () => {
                     
                   ) : (
                     <Image
-                      src="/rb.png"
+                      src="/Robass1.png"
                       width={240}
                       height={100}
                       alt="Robass Atif"
@@ -72,7 +72,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/a1.png"
+                      src="/abdullah1.png"
                       width={240}
                       height={100}
                       alt="Abdullah"
@@ -100,7 +100,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/ahmb.png"
+                      src="/ahmad1.png"
                       width={240}
                       height={100}
                       alt="Ahmad"
