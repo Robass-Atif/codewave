@@ -146,7 +146,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.web ? (
                       <Skeleton count={2} />
                     ) : (
-                      'Data Analyst'
+                      'Software Engineer'
                     )}
                   </p>
                 </div>
@@ -186,7 +186,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/tayyab1.png"
+                      src="/tayyab4.png"
                       width={240}
                       height={100}
                       alt="Tayyab"
