@@ -44,7 +44,7 @@ const TEAM: React.FC = () => {
                     
                   ) : (
                     <Image
-                      src="/robass1.png"
+                      src="/r1.png"
                       width={240}
                       height={100}
                       alt="Robass Atif"
@@ -72,7 +72,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/abdullah1.png"
+                      src="/a1.png"
                       width={240}
                       height={100}
                       alt="Abdullah"
@@ -100,7 +100,7 @@ const TEAM: React.FC = () => {
                     <Skeleton height={220} width={240} />
                   ) : (
                     <Image
-                      src="/ahmad1.png"
+                      src="/ahm1.png"
                       width={240}
                       height={100}
                       alt="Ahmad"
@@ -146,7 +146,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.web ? (
                       <Skeleton count={2} />
                     ) : (
-                      'Software Engineer'
+                      'Software Engineer and Data Analyst'
                     )}
                   </p>
                 </div>
@@ -174,7 +174,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.wordpress ? (
                       <Skeleton count={2} />
                     ) : (
-                      'Cybersecurity Expert'
+                      'Cybersecurity Expert and Data Engineer'
                     )}
                   </p>
                 </div>
