@@ -44,7 +44,7 @@ const TEAM: React.FC = () => {
                     
                   ) : (
                     <Image
-                      src="/Robass1.png"
+                      src="/robass1.png"
                       width={240}
                       height={100}
                       alt="Robass Atif"
