@@ -36,9 +36,18 @@ const Nav = () => {
           <span className='text-3xl text-indigo-600 mr-1 pt-2'>
             <ion-icon name="business"></ion-icon>
           </span>
-          <div className="text-3xl font-bold">
-            <span className="hover:text-blue-300">CodeWaves</span>
+
+          <div className="font-extrabold ">
+            <h1 className=" md:text-3xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 drop-shadow-lg">
+              CodeWaves
+            </h1>
           </div>
+
+
+
+
+
+
         </div>
 
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
@@ -51,7 +60,7 @@ const Nav = () => {
               <Link href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</Link>
             </li>
           ))}
-        
+
         </ul>
       </div>
     </div>

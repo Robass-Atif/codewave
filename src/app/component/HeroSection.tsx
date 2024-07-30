@@ -11,7 +11,9 @@ function HeroSection() {
       <div className="lg:w-1/2 mb-10 lg:mb-0 pr-10 xl:pl-5  border-l-4 border-indigo-600  pl-5">
         <div className="absolute inset-0 left-[-1px] top-0 bottom-0 border-l-4  "></div>
         <h1 className="text-4xl font-extrabold mb-6 text-gray-900 ">
-          Welcome to <span className='text-indigo-700'>CodeWaves</span>
+          Welcome to <span className=" md:text-4xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 drop-shadow-lg">
+            CodeWaves
+          </span>
 
         </h1>
         <p className="text-xl text-gray-800 mb-8 leading-relaxed">
