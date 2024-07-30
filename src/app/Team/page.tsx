@@ -60,7 +60,7 @@ const TEAM: React.FC = () => {
                     {loadingStates.robass ? (
                       <Skeleton count={2} />
                     ) : (
-                      'Full Stack Developer and Data Analytic'
+                      'Full Stack Developer and Data Analyst'
                     )}
                   </p>
                 </div>
