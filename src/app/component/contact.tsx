@@ -68,11 +68,11 @@ function CommentForm() {
     };
 
     return (
-        <form className="bg-blue-600 w-full h-screen md:pt-20  xl:pt-37 pt-14 sm:pt-8" onSubmit={sendEmail}>
-            <div className="card bg-white rounded-lg shadow-lg p-6 mx-auto w-80 mt-30  xl:mb-4">
+        <form className="bg-blue-600 w-full h-screen flex justify-center items-center" onSubmit={sendEmail}>
+            <div className="card bg-white rounded-lg shadow-lg p-6 w-80">
                 <h2 className="title text-2xl font-semibold text-center mb-4">Leave a Comment</h2>
                 <div className="form">
-                    <div className="group mb-4">
+                    <div className="group mb-4 relative">
                         <input
                             type="text"
                             id="name"
@@ -86,11 +86,9 @@ function CommentForm() {
                         <label
                             htmlFor="name"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
-                        >
-
-                        </label>
+                        ></label>
                     </div>
-                    <div className="group mb-4">
+                    <div className="group mb-4 relative">
                         <input
                             type="email"
                             id="email"
@@ -104,11 +102,9 @@ function CommentForm() {
                         <label
                             htmlFor="email"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
-                        >
-
-                        </label>
+                        ></label>
                     </div>
-                    <div className="group mb-4">
+                    <div className="group mb-4 relative">
                         <textarea
                             id="comment"
                             name="comment"
@@ -121,16 +117,12 @@ function CommentForm() {
                         <label
                             htmlFor="comment"
                             className="absolute top-0 left-3 bg-white text-gray-500 text-sm transition-all duration-300 ease-in-out"
-                        >
-
-                        </label>
+                        ></label>
                     </div>
-
                     <button
                         type="submit"
                         className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center transition-all duration-300 ease-in-out"
                         style={{ width: '100px', height: '40px' }} // Adjust these values as needed
-
                     >
                         {loading ? <Ring color="rgba(236,216,234,1)" size={20} thickness={7} /> : 'Submit'}
                     </button>
@@ -138,6 +130,7 @@ function CommentForm() {
                 </div>
             </div>
         </form>
+
     );
 }
 
