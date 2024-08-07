@@ -41,10 +41,10 @@ function SERVICE() {
   }, []);
 
   const renderCard = (key: keyof LoadingStates, title: string, description: string, imgSrc: string) => (
-    <div className='bg-white  rounded-md'>
-      <div className='flex justify-center '>
+    <div className='bg-white rounded-md'>
+      <div className='flex justify-center'>
         {loadingStates[key] ? (
-          <Skeleton height={220} width={240} />
+          <Skeleton height={220} width={240} className='mt-4' /> // Add the margin-top class here
         ) : (
           <Image
             src={imgSrc}

@@ -121,11 +121,12 @@ function CommentForm() {
                     </div>
                     <button
                         type="submit"
-                        className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center transition-all duration-300 ease-in-out"
+                        className="bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg py-2.5 px-5 text-center justify-items-center transition-all duration-300 ease-in-out flex items-center justify-center"
                         style={{ width: '100px', height: '40px' }} // Adjust these values as needed
                     >
                         {loading ? <Ring color="rgba(236,216,234,1)" size={20} thickness={7} /> : 'Submit'}
                     </button>
+
                     <ToastContainer />
                 </div>
             </div>

@@ -40,7 +40,7 @@ const TEAM: React.FC = () => {
               <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
                   {loadingStates.robass ? (
-                    <Skeleton height={220} width={240} />
+                    <Skeleton height={220} width={240} className='mt-4' />
                     
                   ) : (
                     <Image
@@ -54,11 +54,11 @@ const TEAM: React.FC = () => {
                 </div>
                 <div className="px-4 pb-4">
                   <h1 className="text-2xl font-bold text-center">
-                    {loadingStates.robass ? <Skeleton width={150} /> : 'ROBASS ATIF'}
+                    {loadingStates.robass ? <Skeleton width={150}  className='mt-4'/> : 'ROBASS ATIF'}
                   </h1>
                   <p className="text-center text-gray-500 pt-3">
                     {loadingStates.robass ? (
-                      <Skeleton count={2} />
+                      <Skeleton count={1} />
                     ) : (
                       'Full Stack Developer and Data Analyst'
                     )}
@@ -69,7 +69,7 @@ const TEAM: React.FC = () => {
               <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
                   {loadingStates.wordpress ? (
-                    <Skeleton height={220} width={240} />
+                    <Skeleton height={220} width={240} className='mt-4' />
                   ) : (
                     <Image
                       src="/abdullah1.png"
@@ -82,11 +82,11 @@ const TEAM: React.FC = () => {
                 </div>
                 <div className="px-4 pb-4">
                   <h1 className="text-2xl font-bold text-center">
-                    {loadingStates.wordpress ? <Skeleton width={150} /> : 'MUHAMMAD ABDULLAH'}
+                    {loadingStates.wordpress ? <Skeleton width={150}  className='mt-4'/> : 'MUHAMMAD ABDULLAH'}
                   </h1>
                   <p className="text-center text-gray-500 pt-3">
                     {loadingStates.wordpress ? (
-                      <Skeleton count={2} />
+                      <Skeleton count={1} />
                     ) : (
                       'MERN Stack Developer'
                     )}
@@ -97,7 +97,7 @@ const TEAM: React.FC = () => {
               <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
                   {loadingStates.app ? (
-                    <Skeleton height={220} width={240} />
+                    <Skeleton height={220} width={240}  className='mt-4'/>
                   ) : (
                     <Image
                       src="/ahmad1.png"
@@ -110,11 +110,11 @@ const TEAM: React.FC = () => {
                 </div>
                 <div className="px-4 pb-4">
                   <h1 className="text-2xl font-bold text-center">
-                    {loadingStates.app ? <Skeleton width={150} /> : 'MUHAMMAD AHMAD'}
+                    {loadingStates.app ? <Skeleton width={150} className='mt-4' /> : 'MUHAMMAD AHMAD'}
                   </h1>
                   <p className="text-center text-gray-500 pt-3">
                     {loadingStates.app ? (
-                      <Skeleton count={2} />
+                      <Skeleton count={1} />
                     ) : (
                       'Project Manager'
                     )}
@@ -127,7 +127,7 @@ const TEAM: React.FC = () => {
               <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
                   {loadingStates.web ? (
-                    <Skeleton height={220} width={240}  />
+                    <Skeleton height={220} width={240} className='mt-4' />
                   ) : (
                     <Image
                       src="/Saad1.png"
@@ -140,11 +140,11 @@ const TEAM: React.FC = () => {
                 </div>
                 <div className="px-4 pb-4">
                   <h1 className="text-2xl font-bold text-center">
-                    {loadingStates.web ? <Skeleton width={150} /> : 'MUHAMMAD SAAD AKMAL'}
+                    {loadingStates.web ? <Skeleton width={150} className='mt-4'/> : 'MUHAMMAD SAAD AKMAL'}
                   </h1>
                   <p className="text-center text-gray-500 pt-3">
                     {loadingStates.web ? (
-                      <Skeleton count={2} />
+                      <Skeleton count={1} />
                     ) : (
                       'Software Engineer '
                     )}
@@ -155,7 +155,7 @@ const TEAM: React.FC = () => {
               <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
                   {loadingStates.wordpress ? (
-                    <Skeleton height={220} width={240} />
+                    <Skeleton height={220} width={240} className='mt-4'/>
                   ) : (
                     <Image
                       src="/ashhad1.png"
@@ -168,11 +168,11 @@ const TEAM: React.FC = () => {
                 </div>
                 <div className="px-4 pb-4">
                   <h1 className="text-2xl font-bold text-center">
-                    {loadingStates.wordpress ? <Skeleton width={150} /> : 'ASHHAD MAZHAR'}
+                    {loadingStates.wordpress ? <Skeleton width={150} className='mt-4' /> : 'ASHHAD MAZHAR'}
                   </h1>
                   <p className="text-center text-gray-500 pt-3">
                     {loadingStates.wordpress ? (
-                      <Skeleton count={2} />
+                      <Skeleton count={1} />
                     ) : (
                       'Cybersecurity Expert and Data Engineer'
                     )}
@@ -183,7 +183,7 @@ const TEAM: React.FC = () => {
               <div className="bg-white shadow-md rounded-md">
                 <div className="flex justify-center relative">
                   {loadingStates.app ? (
-                    <Skeleton height={220} width={240} />
+                    <Skeleton height={220} width={240} className='mt-4'/>
                   ) : (
                     <Image
                       src="/tayyab5.png"
@@ -197,11 +197,11 @@ const TEAM: React.FC = () => {
                 </div>
                 <div className="px-4 pb-4">
                   <h1 className="text-2xl font-bold text-center">
-                    {loadingStates.app ? <Skeleton width={150} /> : 'TAYYAB ASHRAF'}
+                    {loadingStates.app ? <Skeleton width={150} className='mt-4'/> : 'TAYYAB ASHRAF'}
                   </h1>
                   <p className="text-center text-gray-500 pt-3">
                     {loadingStates.app ? (
-                      <Skeleton count={2} />
+                      <Skeleton count={1} />
                     ) : (
                       'Technical Recruiter'
                     )}
